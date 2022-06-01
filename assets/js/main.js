@@ -257,6 +257,6 @@ document.body.appendChild(image);
 
 
 changePicture = () => {
-    const i = (Math.floor(Math.random() * 30));
+    const i = (Math.floor(Math.random() * data.length));
     image.setAttribute('src', data[i].download_url);
 }
