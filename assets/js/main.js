@@ -249,14 +249,13 @@ const headline = document.createElement('h1');
 button.setAttribute('type', 'button');
 button.setAttribute('value', 'Click Me');
 button.setAttribute('onclick', 'changePicture()');
-headline.innerText = 'Zufälliges Bild mit JavaScript anzeigen';
-document.body.appendChild(headline);
-document.body.appendChild(button);
-document.body.appendChild(image);
-
+headline.textContent = 'Zufälliges Bild mit JavaScript anzeigen';
+content.appendChild(headline);
+content.appendChild(button);
 
 
 changePicture = () => {
     const i = (Math.floor(Math.random() * data.length));
     image.setAttribute('src', data[i].download_url);
+    content.appendChild(image);
 }
